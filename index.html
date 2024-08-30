@@ -34,22 +34,34 @@
     />
     
     <script type="module" crossorigin src="/bookshelf-project/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/bookshelf-project/assets/index-b9f532b3.css">
+    <link rel="stylesheet" href="/bookshelf-project/assets/index-fec97f24.css">
   </head>
   <body>
     <header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="../img/symbol-defs.svg" class="nav-link">Page 2</a>
-      </li>
+  <nav class="nav-list">
+    <a class="logo-name" href="index.html">
+      <img src="logo.svg">
+      <span>Bookshelf</span>
+    </a>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
+    <ul>
+      <li>
+        <a href="index.html">
+          <span class="text-home">HOME</span>
+        </a>
+      </li>
+      <li>
+        <a href="">
+          <span>SHOPPING LIST</span>
+          <svg class="icon-uil-cart">
+            <use href="../img/icons.svg#icon-uil-cart"></use>
+          </svg>
+        </a>
       </li>
     </ul>
-  </nav>
-  <div class="main-wrapper">
+
+    <div>
+      <div class="main-wrapper">
   <div class="text" id="light-theme-text">Light</div>
   <div class="theme-switch-wrapper">
     <label for="theme-btn">
@@ -68,8 +80,11 @@
   <div class="text disabled" id="dark-theme-text">Dark</div>
 </div>
 
-</header>
+      </div>
+    </div>
+  </nav>
 
+</header>
 
     
 
