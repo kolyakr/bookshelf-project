@@ -1,0 +1,37 @@
+:root {
+  --yellow-color: #eac645;
+  --violet-color: #4f2ee8;
+  --gray-color: #202024;
+  --light-gray-color: #b4afaf;
+  --dark-color: #111;
+  --white-color: #fff;
+  --black-color: #000;
+  --white-background-color: #f6f6f6;
+  --border-color: rgba(79, 46, 232, 0.4);
+}
+
+.dark {
+  --background-color: var(--gray-color);
+}
+
+.light {
+  --background-color: var(--white-background-color);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.container {
+  max-width: 1422px;
+  padding: 0 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
