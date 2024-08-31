@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50px;
   background: var(--bg-color);
 }
 .main-wrapper .text {
