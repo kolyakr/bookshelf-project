@@ -6,8 +6,9 @@
 */
 @import url('./reset.css');
 @import url('./common.css');
-@import url('../components/themeButton/themeButton.css');
 @import url('./header.css');
+
+@import url('./components.css');
 
 :root {
   font-synthesis: none;
@@ -15,4 +16,8 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--background-color);
 }
