@@ -1,12 +1,13 @@
 .header {
-  background-color: white;
+  background-color: var(--header-color);
   display: flex;
   align-items: center;
   padding: 0 20px;
-  border: 2px solid black;
+  border: 2px solid var(--header-border-color);
   border-bottom-left-radius: 0.8rem;
   border-bottom-right-radius: 0.8rem;
   font-weight: bold;
+  color: var(--text-color);
 }
 
 .nav-list {
@@ -40,9 +41,10 @@
 }
 
 .text-home {
-  background-color: #eac645;
+  background-color: var(--yellow-color);
   border-radius: 0.9rem;
   padding: 10px 17px;
+  color: var(--black-color);
 }
 
 .icon-uil-cart {
