@@ -1,0 +1,58 @@
+.fonds-container{
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.7rem;
+  align-items: center;
+  width: 300px;
+  height: 650px;
+  background-image: linear-gradient(rgb(42, 71, 197),#8b59cb, #bd41e2);
+  color: white;
+  margin: 15px;
+  padding: 0px;
+}
+
+.title{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 90px;
+}
+
+.fonds-list{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+  a{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    span{
+      font-size: 1.2rem;
+    }
+
+  }
+}
+
+.scroll-btn{
+  padding: 10px;
+  margin: 20px;
+  border-radius: 100px;
+  border: none;
+  background-color: white;
+}
+.fond-svg{
+  width: 20px;
+  fill: white;
+}
+#icon-material-symbols{
+  height: 25px;
+  width: 25px;
+  stroke: rgb(122, 13, 200);
+  fill: rgb(122, 13, 200);
+  /* transform: scaleY(-1); */
+}
+.fonds-list img{
+  filter: brightness(0) invert(1);
+}
