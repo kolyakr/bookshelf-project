@@ -8,33 +8,40 @@
   --black-color: #000;
   --white-background-color: #f6f6f6;
   --border-color: rgba(79, 46, 232, 0.4);
-
-  --primary-color: #fe9f5b;
-  --secondary-color: #e7e8eb;
-  --tertiary-color: #ffffff;
-  --text-color: #000000;
-  --disabled-text-color: #b9bdc9;
-  --bg-color: #ffffff;
-  --header-border-color: #000;
-  --header-color: #ffffff;
 }
 
 [data-theme='dark'] {
+  /* Body */
   --background-color: var(--gray-color);
 
-  --primary-color: #ffe5b5;
-  --secondary-color: #0a0d12;
-  --tertiary-color: #ffffff;
-  --text-color: #ffffff;
-  --disabled-text-color: #b4afaf;
-  --bg-color: #1c2138;
-  --header-border-color: #ffffff;
-  --header-color: #000
+  /* Header */
+  --header-border-color: var(--white-color);
+  --header-color: var(--black-color);
+  --header-text-color: #f3f3f3;
+
+  /* Theme switcher */
+  --switch-btn-primary-color: #ffe5b5;
+  --switch-btn-tertiary-color: var(--white-color);
+  --switch-btn-bg-color: #081f37;
+  --switch-btn-border-color: var(--white-color);
 }
 
 [data-theme='light'] {
+  /* Body */
   --background-color: var(--white-background-color);
+
+  /* Header */
+  --header-border-color: var(--black-color);
+  --header-color: var(--white-color);
+  --header-text-color: var(--dark-color);
+
+  /* Theme switcher */
+  --switch-btn-primary-color: #fe9f5b;
+  --switch-btn-tertiary-color: var(--white-color);
+  --switch-btn-bg-color: #acdcee;
+  --switch-btn-border-color: var(--black-color);
 }
+
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -47,6 +54,7 @@
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
 .container {
   max-width: 1440px;
   margin-left: auto;
