@@ -1,0 +1,1 @@
+import { scrollList } from "./js/fonds";
