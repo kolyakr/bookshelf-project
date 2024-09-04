@@ -19,6 +19,10 @@
   --header-color: var(--black-color);
   --header-text-color: #f3f3f3;
 
+  /* Sidebar */
+  --sidebar-all-categories-color: var(--yellow-color);
+  --sidebar-scroll: var(--black-color);
+
   /* Theme switcher */
   --switch-btn-primary-color: #ffe5b5;
   --switch-btn-tertiary-color: var(--white-color);
@@ -34,6 +38,10 @@
   --header-border-color: var(--black-color);
   --header-color: var(--white-color);
   --header-text-color: var(--dark-color);
+
+  /* Sidebar */
+  --sidebar-all-categories-color: var(--violet-color);
+  --sidebar-scroll: var(--light-gray-color);
 
   /* Theme switcher */
   --switch-btn-primary-color: #fe9f5b;
