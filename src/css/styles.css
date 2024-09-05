@@ -9,6 +9,7 @@
 @import url('./header.css');
 @import url('./categories.css');
 @import url('./fonds.css');
+@import url('./main-container.css');
 
 @import url('./components.css');
 
@@ -22,4 +23,17 @@
 
 body {
   background-color: var(--background-color);
+}
+
+.content{
+  display: flex;
+  gap: 40px;
+
+  .sidebar{
+    flex: 0 0 30%;
+  }
+
+  .main{
+    flex: 1;
+  }
 }
