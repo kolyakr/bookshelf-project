@@ -3,26 +3,25 @@
   flex-direction: column;
   border-radius: 0.7rem;
   align-items: flex-start;
-  width: 320px;
+  width: 300px;
   background-image: linear-gradient(rgb(42, 71, 197), #8b59cb, #bd41e2);
   color: white;
   margin: 15px;
   padding-left: 30px;
   padding-right: 30px;
-  height: 550px;
 }
 
 .title {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 15px;
   height: 90px;
 }
 
 .fonds-list {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   width: 100%;
   padding: 0;
 }
@@ -30,7 +29,7 @@
 .fonds-list li {
   display: flex;
   align-items: center;
-  height: 53px;
+  height: 43px;
   padding: 5px;
   width: 100%;
 }
