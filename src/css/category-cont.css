@@ -1,0 +1,10 @@
+.category-list-cont{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  li{
+    flex: 0 0 15%;
+  }
+}

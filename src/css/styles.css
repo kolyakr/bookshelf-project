@@ -7,9 +7,10 @@
 @import url('./reset.css');
 @import url('./common.css');
 @import url('./header.css');
-@import url('./categories.css');
+@import url('./categories-list.css');
 @import url('./fonds.css');
-@import url('./main-container.css');
+@import url('./best-sellers-cont.css');
+@import url('./category-cont.css');
 
 @import url('./components.css');
 
