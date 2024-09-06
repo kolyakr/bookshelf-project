@@ -23,18 +23,25 @@
     ul{
       display: flex;
       flex-direction: row;
+      gap: 30px;
       justify-content: space-between;
 
       li{
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        gap: 30px;
 
         .book-name{
           color: var(--main-text-color);
+          font-weight: bold;
         }
         .author-name{
           color: var(--light-gray-color);
+        }
+        img{
+          width: 220px;
+          height: 220px;
+          object-fit: cover;
         }
 
       }
