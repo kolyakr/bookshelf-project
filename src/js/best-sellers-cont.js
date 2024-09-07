@@ -1,15 +1,15 @@
-import { allCategories } from "./data";
-import { getApiData } from "./axios";
-import { generateCategoryBooks } from "./category-cont";
+import { allCategories } from './data';
+import { getApiData } from './axios';
+import { generateCategoryBooks } from './category-cont';
 export const mainContainer = document.querySelector('.main-container');
 
-export async function generateBestSellersBooks(){
+export async function generateBestSellersBooks() {
   let generalHTML = `
     <h1>Best Sellers <span class="books-word">Books</span></h1>
   `;
 
   const randomCategories = allCategories.slice(0, 4);
-  for(const category of randomCategories){
+  for (const category of randomCategories) {
     generalHTML += `
       <section>
         <a href="">
@@ -17,13 +17,15 @@ export async function generateBestSellersBooks(){
         </a>
         <ul class="list-cont">
     `;
-    let books = await getApiData(`/books/category?category=${category.list_name}`);
+    let books = await getApiData(
+      `/books/category?category=${category.list_name}`
+    );
     books = books.slice(0, 5);
-    books.forEach((book) => {
+    books.forEach(book => {
       generalHTML += `
         <li class="list-item-cont">
           <a href="">
-            <img src="${book.book_image}">
+            <img class="book-img" src="${book.book_image}" alt="${book.list_name}" width="${book.book_image_width}" height="${book.book_image_height}"  loading="lazy">
             <p class="book-name">${book.title}</p>
             <p class="author-name">${book.author}</p>
           </a>
@@ -41,10 +43,10 @@ export async function generateBestSellersBooks(){
   initializeSeeMoreBtn();
 }
 
-function initializeSeeMoreBtn(){
+function initializeSeeMoreBtn() {
   const seeMoreBtn = document.querySelectorAll('.see-more-btn');
-  seeMoreBtn.forEach((button) => {
-    button.addEventListener('click', (e) => {
+  seeMoreBtn.forEach(button => {
+    button.addEventListener('click', e => {
       generateCategoryBooks(e.target.dataset.category);
     });
   });
