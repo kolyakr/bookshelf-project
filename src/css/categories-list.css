@@ -6,10 +6,6 @@
   width: 356px;
   height: 472px;
   margin-bottom: 86px;
-
-  h3 {
-    color: var(--sidebar-all-categories-color);
-  }
 }
 .categories-list {
   display: flex;
@@ -21,7 +17,7 @@
 .current-category{
   font-weight: 700;
   font-size: 18px;
-  color: var(--violet-color);
+  color: var(--sidebar-all-categories-color);
   text-transform: uppercase;
 }
 
