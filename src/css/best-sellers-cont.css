@@ -38,6 +38,12 @@
   border-radius: 8px;
   width: 180px;
   height: 256px;
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    rgba(79, 46, 232, 0.6) 18.03%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(10px);
 }
 .book-name {
   color: var(--main-text-color);
