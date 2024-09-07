@@ -18,6 +18,13 @@
   color: grey;
 }
 
+.current-category{
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--violet-color);
+  text-transform: uppercase;
+}
+
 ::-webkit-scrollbar {
   width: 7px;
 }
