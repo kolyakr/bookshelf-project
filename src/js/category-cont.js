@@ -29,4 +29,5 @@ export async function generateCategoryBooks(category){
 
   generalHTML += `</ul>`;
   mainContainer.innerHTML = generalHTML;
+
 }

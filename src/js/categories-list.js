@@ -38,18 +38,18 @@ export async function generateCategoryList(){
     link.addEventListener('click', (e) => {
       e.preventDefault();
       generateCategoryBooks(e.target.textContent);
-      markCategory(e.target);
+      markCategory(e.target.id);
     });
   })
 }
 
-function markCategory(category){
+export function markCategory(id){
   document.getElementById(`${currentCategoryId}`)
     .classList.remove('current-category');
 
-  category.classList.add('current-category');
-  currentCategoryId = category.id;
-  console.log(currentCategoryId);
+  document.getElementById(`${id}`)
+    .classList.add('current-category');
+  currentCategoryId = id;
 }
 
 

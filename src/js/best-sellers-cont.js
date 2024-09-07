@@ -1,4 +1,5 @@
 import { getApiData } from './axios';
+import { markCategory } from './categories-list';
 import { generateCategoryBooks } from './category-cont';
 export const mainContainer = document.querySelector('.main-container');
 
@@ -9,6 +10,7 @@ export async function generateBestSellersBooks() {
 
   const categories = JSON.parse(localStorage.getItem('allCategories'));
   console.log(categories);
+  let number = 2;
   for (const category of categories) {
     generalHTML += `
       <section>
@@ -35,9 +37,10 @@ export async function generateBestSellersBooks() {
     });
     generalHTML += `
       </ul>
-      <button class="see-more-btn" data-category="${category.list_name}">SEE MORE</button>
+      <button class="see-more-btn" data-category="${category.list_name}" data-id="category-link-${number}">SEE MORE</button>
     </section>
-  `;
+    `;
+    number++;
   }
 
   mainContainer.innerHTML = generalHTML;
@@ -49,6 +52,7 @@ function initializeSeeMoreBtn() {
   seeMoreBtn.forEach(button => {
     button.addEventListener('click', e => {
       generateCategoryBooks(e.target.dataset.category);
+      markCategory(e.target.dataset.id);
     });
   });
 }
