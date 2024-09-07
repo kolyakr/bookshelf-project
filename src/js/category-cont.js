@@ -1,21 +1,25 @@
-import { mainContainer } from "./best-sellers-cont";
-import { getApiData } from "./axios";
-import { removeDuplicates } from "./best-sellers-cont";
-import { generateBestSellersBooks } from "./best-sellers-cont";
+import { mainContainer } from './best-sellers-cont';
+import { getApiData } from './axios';
+import { removeDuplicates } from './best-sellers-cont';
+import { generateBestSellersBooks } from './best-sellers-cont';
 
-export async function generateCategoryBooks(category){
-  if(category == 'All categories'){
+export async function generateCategoryBooks(category) {
+  if (category == 'All categories') {
     generateBestSellersBooks();
     return;
   }
 
+  const categoryWords = category.split(' ');
+  const lastWord = categoryWords.pop();
+  const categoryWithoutLastWord = categoryWords.join(' ');
+
   let generalHTML = `
-    <h1>${category}</h1>
+    <h1>${categoryWithoutLastWord} <span class="books-word">${lastWord}</span></h1>
     <ul class="category-list-cont">
   `;
   let categoryBooks = await getApiData(`/books/category?category=${category}`);
   categoryBooks = removeDuplicates(categoryBooks);
-  categoryBooks.forEach((book) => {
+  categoryBooks.forEach(book => {
     generalHTML += `
         <li class="list-item-cont">
           <a href="">
@@ -29,5 +33,4 @@ export async function generateCategoryBooks(category){
 
   generalHTML += `</ul>`;
   mainContainer.innerHTML = generalHTML;
-
 }
