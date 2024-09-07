@@ -7,9 +7,8 @@ export async function generateCategoryBooks(category){
     <ul class="category-list-cont">
   `;
   const categoryBooks = await getApiData(`/books/category?category=${category}`);
-  console.log(categoryBooks.length);
+  console.log(categoryBooks);
   categoryBooks.forEach((book) => {
-
     generalHTML += `
       <li>
         <a href="">
