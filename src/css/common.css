@@ -1,3 +1,8 @@
+* {
+  transition: background-color 0.3s ease-out, color 0.1s ease,
+    border-color 0.3s ease;
+}
+
 :root {
   --yellow-color: #eac645;
   --violet-color: #4f2ee8;
@@ -21,7 +26,12 @@
 
   /* Sidebar */
   --sidebar-all-categories-color: var(--yellow-color);
-  --sidebar-scroll: var(--black-color);
+  --sidebar-categories-color: #ffffff99;
+  --sidebar-scroll: #11111199;
+
+  /* Main */
+  --main-text-color: var(--white-color);
+  --main-theme-color: var(--gray-color);
 
   /* Theme switcher */
   --switch-btn-primary-color: #ffe5b5;
@@ -41,7 +51,12 @@
 
   /* Sidebar */
   --sidebar-all-categories-color: var(--violet-color);
-  --sidebar-scroll: var(--light-gray-color);
+  --sidebar-categories-color: #11111199;
+  --sidebar-scroll: #e0e0e0;
+
+  /* Main */
+  --main-text-color: var(--black-color);
+  --main-theme-color: var(--white-background-color);
 
   /* Theme switcher */
   --switch-btn-primary-color: #fe9f5b;

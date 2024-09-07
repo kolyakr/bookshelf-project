@@ -1,0 +1,93 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  width: 996px;
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+    letter-spacing: -0.04em;
+    margin-bottom: 40px;
+    color: var(--main-text-color);
+  }
+  .books-word {
+    color: var(--violet-color);
+  }
+
+  .categories-list {
+    li {
+      display: flex;
+      flex-direction: column;
+
+      h4 {
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 400;
+        letter-spacing: 0.03em;
+        color: var(--light-gray-color);
+        margin-bottom: 18px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.list-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.list-item-cont {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc((100% - 96px) / 5);
+}
+
+.book-img {
+  border-radius: 8px;
+  width: 180px;
+  height: 256px;
+  background: radial-gradient(
+    183.6% 183.01% at 59.76% -23.42%,
+    rgba(79, 46, 232, 0.6) 18.03%,
+    rgba(255, 255, 255, 0.6) 100%
+  );
+  backdrop-filter: blur(10px);
+}
+.book-name {
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 180px;
+  margin-bottom: 4px;
+
+  margin-top: 14px;
+}
+.author-name {
+  font-style: italic;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.04em;
+  color: var(--light-gray-color);
+}
+
+.see-more-btn {
+  width: 124px;
+  height: 46px;
+  align-self: flex-end;
+  background-color: var(--main-theme-color);
+  color: var(--main-text-color);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  padding: 5px 15px;
+  letter-spacing: 0.01em;
+  border: 2px solid var(--violet-color);
+  border-radius: 40px;
+  margin-top: 32px;
+}
