@@ -6,6 +6,7 @@ export const mainContainer = document.querySelector('.main-container');
 export async function generateBestSellersBooks() {
   let generalHTML = `
     <h1>Best Sellers <span class="books-word">Books</span></h1>
+    <ul class="categories-list">
   `;
 
   const categories = JSON.parse(localStorage.getItem('allCategories'));
@@ -13,10 +14,10 @@ export async function generateBestSellersBooks() {
   let number = 2;
   for (const category of categories) {
     generalHTML += `
-      <section>
-        <a href="">
+      <li>
+        <div>
           <h4>${category.list_name}</h4>
-        </a>
+        </div>
         <ul class="list-cont">
     `;
     let books = await getApiData(
@@ -27,22 +28,23 @@ export async function generateBestSellersBooks() {
     books.forEach(book => {
       generalHTML += `
         <li class="list-item-cont">
-          <a href="">
+          <div>
             <img class="book-img" src="${book.book_image}" alt="${book.list_name}" width="${book.book_image_width}" height="${book.book_image_height}"  loading="lazy">
             <p class="book-name">${book.title}</p>
             <p class="author-name">${book.author}</p>
-          </a>
+          </div>
         </li>
       `;
     });
     generalHTML += `
       </ul>
       <button class="see-more-btn" data-category="${category.list_name}" data-id="category-link-${number}">SEE MORE</button>
-    </section>
+    </li>
     `;
     number++;
   }
 
+  generalHTML += '</ul>';
   mainContainer.innerHTML = generalHTML;
   initializeSeeMoreBtn();
 }
