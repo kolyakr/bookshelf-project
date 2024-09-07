@@ -8,8 +8,7 @@ export async function generateBestSellersBooks() {
     <h1>Best Sellers <span class="books-word">Books</span></h1>
   `;
 
-  const randomCategories = allCategories.slice(0, 4);
-  for (const category of randomCategories) {
+  for (const category of allCategories) {
     generalHTML += `
       <section>
         <a href="">
@@ -20,6 +19,7 @@ export async function generateBestSellersBooks() {
     let books = await getApiData(
       `/books/category?category=${category.list_name}`
     );
+    books = removeDuplicates(books);
     books = books.slice(0, 5);
     books.forEach(book => {
       generalHTML += `
@@ -50,4 +50,17 @@ function initializeSeeMoreBtn() {
       generateCategoryBooks(e.target.dataset.category);
     });
   });
+}
+
+export function removeDuplicates(array) {
+  let duplicates = [];
+  const newArray = array.filter(item => {
+    if (!duplicates.find(duplicate => duplicate.title == item.title)) {
+      duplicates.push(item);
+      return true;
+    } else {
+      return false;
+    }
+  });
+  return newArray;
 }
