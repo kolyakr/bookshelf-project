@@ -3,10 +3,11 @@
   flex-direction: column;
   border-radius: 0.7rem;
   align-items: flex-start;
-  width: 300px;
+  width: 356px;
+  height: 472px;
   background-image: linear-gradient(rgb(42, 71, 197), #8b59cb, #bd41e2);
   color: white;
-  margin: 15px;
+  /* margin: 15px; */
   padding-left: 30px;
   padding-right: 30px;
 }

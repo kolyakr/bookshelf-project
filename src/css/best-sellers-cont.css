@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   width: 996px;
-  margin: 20px;
   h1 {
     font-size: 1.8rem;
     margin-bottom: 25px;

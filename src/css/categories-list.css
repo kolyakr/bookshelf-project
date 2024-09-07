@@ -1,18 +1,17 @@
-.all-categories-cont{
+.all-categories-cont {
   display: flex;
   flex-direction: column;
   gap: 25px;
   overflow-y: scroll;
-  width: 300px;
-  height: 300px;
-  margin: 20px;
-  margin-bottom: 70px;
+  width: 356px;
+  height: 472px;
+  margin-bottom: 86px;
 
-  h3{
+  h3 {
     color: var(--sidebar-all-categories-color);
   }
 }
-.categories-list{
+.categories-list {
   display: flex;
   flex-direction: column;
   gap: 20px;

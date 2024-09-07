@@ -26,15 +26,17 @@ body {
   background-color: var(--background-color);
 }
 
-.content{
+.content {
   display: flex;
   gap: 40px;
+  padding: 40px 24px 72px 24px;
 
-  .sidebar{
-    flex: 0 0 30%;
+  .sidebar {
+    /* flex: 0 0 30%; */
+    width: 356px;
   }
 
-  .main{
+  .main {
     flex: 1;
   }
 }
