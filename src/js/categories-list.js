@@ -1,14 +1,19 @@
 import { getApiData } from "./axios";
-import { allCategories } from "./data";
 import { generateCategoryBooks } from "./category-cont";
 
 const categoryList = document.querySelector('.categories-list');
 
 export async function generateCategoryList(){
-  const data = await getApiData('/books/category-list');
+  let allCategories;
   let generalHTML = '';
+  if(localStorage.getItem('allCategories') == null){
+    allCategories = await getApiData('/books/category-list');
+    localStorage.setItem('allCategories', JSON.stringify(allCategories));
+  }else{
+    allCategories = JSON.parse(localStorage.getItem('allCategories'));
+  }
 
-  data.forEach((item) => {
+  allCategories.forEach((item) => {
     generalHTML += `
       <li class="category-link">
         <a href="#">${item.list_name}</a>
@@ -17,8 +22,6 @@ export async function generateCategoryList(){
   });
 
   categoryList.innerHTML = generalHTML;
-  allCategories.length = 0;
-  allCategories.push(...data);
 
   document.querySelectorAll('.category-link').forEach((link) => {
     link.addEventListener('click', (e) => {

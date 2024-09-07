@@ -36,5 +36,3 @@ export const fondsList = [
     name: "united24"
   }
 ];
-
-export let allCategories = [];
