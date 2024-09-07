@@ -11,13 +11,15 @@
     color: var(--violet-color);
   }
 
-  section {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    margin-bottom: 30px;
-    h4 {
-      color: var(--light-gray-color);
+  .categories-list{
+    li{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: 10px;
+      h4 {
+        color: var(--light-gray-color);
+      }
     }
   }
 }
