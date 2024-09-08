@@ -7,7 +7,6 @@ export async function getApiData(url) {
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
-    console.log(error);
     throw error;
   }
 }

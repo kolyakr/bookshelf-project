@@ -1,6 +1,7 @@
 import { getApiData } from './axios';
 import { markCategory } from './categories-list';
 import { generateCategoryBooks } from './category-cont';
+
 export const mainContainer = document.querySelector('.main-container');
 
 export async function generateBestSellersBooks() {
@@ -10,7 +11,10 @@ export async function generateBestSellersBooks() {
   `;
 
   const categories = JSON.parse(localStorage.getItem('allCategories'));
-  console.log(categories);
+  if (!mainContainer) {
+    return;
+  }
+
   let number = 2;
   for (const category of categories) {
     generalHTML += `
