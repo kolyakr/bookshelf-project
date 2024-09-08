@@ -3,9 +3,9 @@ import{a as h}from"./vendor-0cb09735.js";(function(){const o=document.createElem
       <a href="${l[e-1].link}" target="_blank">
         <span>0${e}</span>
         <img
-          src="../img/fonds/${l[e-1].name}_1x.png"
-          srcset="../img/fonds/${l[e-1].name}_1x.png 1x,
-                  ../img/fonds/${l[e-1].name}_2x.png 2x"
+          src="./img/fonds/${l[e-1].name}_1x.png"
+          srcset="./img/fonds/${l[e-1].name}_1x.png 1x,
+                  ./img/fonds/${l[e-1].name}_2x.png 2x"
         >
       </a>
     </li>
@@ -50,4 +50,4 @@ import{a as h}from"./vendor-0cb09735.js";(function(){const o=document.createElem
         <a href="#" class="category-link" id="category-link-${n}">${r.list_name}</a>
       </li>
     `,n++}),v.innerHTML=o,document.getElementById(`${g}`).classList.add("current-category"),document.querySelectorAll(".category-link").forEach(r=>{r.addEventListener("click",t=>{t.preventDefault(),k(t.target.textContent),w(t.target.id)})})}function w(e){document.getElementById(`${g}`).classList.remove("current-category"),document.getElementById(`${e}`).classList.add("current-category"),g=e}document.addEventListener("DOMContentLoaded",async()=>{await _(),await f()});const u=document.querySelector('.theme-switch-wrapper input[type="checkbox"]'),M=window.matchMedia("(prefers-color-scheme: dark)").matches,d=localStorage.getItem("theme");d?(document.documentElement.setAttribute("data-theme",d),d==="dark"&&(u.checked=!0)):M?(document.documentElement.setAttribute("data-theme","dark"),u.checked=!0):document.documentElement.setAttribute("data-theme","light");function B(e){e.target.checked?(document.documentElement.setAttribute("data-theme","dark"),localStorage.setItem("theme","dark")):(document.documentElement.setAttribute("data-theme","light"),localStorage.setItem("theme","light"))}u.addEventListener("change",B,!1);
-//# sourceMappingURL=themeButton-5dac039e.js.map
+//# sourceMappingURL=themeButton-d18c8591.js.map
