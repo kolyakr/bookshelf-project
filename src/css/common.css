@@ -33,6 +33,11 @@
   --main-text-color: var(--white-color);
   --main-theme-color: var(--gray-color);
 
+  /*Modal window*/
+
+  --modal-border-color: var(--white-color);
+  --modal-background-color: var(--gray-color);
+
   /* Theme switcher */
   --switch-btn-primary-color: #ffe5b5;
   --switch-btn-tertiary-color: var(--white-color);
@@ -63,6 +68,10 @@
   --switch-btn-tertiary-color: var(--white-color);
   --switch-btn-bg-color: #acdcee;
   --switch-btn-border-color: var(--black-color);
+
+  /*Modal window*/
+  --modal-border-color: var(--black-color);
+  --modal-background-color: var(--white-color);
 }
 
 .visually-hidden {

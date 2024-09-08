@@ -1,12 +1,109 @@
 .modal-window{
-  display: inline-block;
-	background: #2875ed;
-	margin: .5em;
-	padding: .5em 1em;
-	border: none;
-	color: white;
-	font: inherit;
-	border-radius: 3px;
-	cursor: pointer;
-	outline: none;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
+  width: 579px;
+  height: 485px;
+  border: 2px solid var(--modal-border-color);
+  background-color: var(--modal-background-color);
+  border-radius: 18px;
+
+  svg{
+    fill: var(--black-color);
+  }
+}
+
+.modal-book-info{
+  display: flex;
+  gap: 24px;
+  width: 279px;
+
+  .modal-book-img{
+    width: 192px;
+    height: 281px;
+  }
+
+  ul{
+    display: flex;
+    flex-direction: column;
+    width: 279px;
+    gap: 20px;
+
+    .name-and-author{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+
+      .modal-book-name{
+        font-weight: 700;
+        font-size: 24px;
+        text-align:left;
+        color: var(--modal-border-color);
+      }
+      .modal-book-author{
+        font-weight: 400;
+        font-size: 14px;
+        text-align: left;
+        color: grey;
+      }
+    }
+
+    .modal-book-description{
+      color: var(--modal-border-color);
+    }
+
+    .modal-links{
+      width: 115px;
+      height: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      img{
+        filter: grayscale(100%);
+      }
+    }
+
+  }
+}
+
+.do-shopping-list-btn{
+    width: 499px;
+    height: 64px;
+    border-radius: 40px;
+    padding: 20px 173px 20px 173px;
+    border: 2px solid var(--violet-color);
+    overflow: hidden;
+    text-align: center;
+    line-height: 0px;
+    font-weight: 700;
+    font-size: 18px;
+    background-color: var(--modal-background-color);
+    color: var(--modal-border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.x-close-btn{
+  width: 28px;
+  height: 28px;
+  position: absolute;
+  top: 24px;
+  left: 527px;
+}
+
+.congratulation-text{
+  width: 324px;
+  height: 28px;
+  font-weight: 400;
+  font-size: 12px;
+  color:#8a878780;
+  position: absolute;
+  top: 433px;
+  left: 128px;
 }
