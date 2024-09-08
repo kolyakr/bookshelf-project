@@ -1,6 +1,7 @@
 import { getApiData } from './axios';
 import { markCategory } from './categories-list';
 import { generateCategoryBooks } from './category-cont';
+import { showBookInfo } from './modal-window';
 export const mainContainer = document.querySelector('.main-container');
 
 export async function generateBestSellersBooks() {
@@ -46,6 +47,7 @@ export async function generateBestSellersBooks() {
 
   generalHTML += '</ul>';
   mainContainer.innerHTML = generalHTML;
+  initializeBookContainers();
   initializeSeeMoreBtn();
 }
 
@@ -55,6 +57,15 @@ function initializeSeeMoreBtn() {
     button.addEventListener('click', e => {
       generateCategoryBooks(e.target.dataset.category);
       markCategory(e.target.dataset.id);
+    });
+  });
+}
+
+export function initializeBookContainers(){
+  const booksImg = document.querySelectorAll('.book-img');
+  booksImg.forEach(img => {
+    img.addEventListener('click', (e) => {
+      showBookInfo(e.target.parentElement);
     });
   });
 }
