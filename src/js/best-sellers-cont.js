@@ -61,10 +61,11 @@ function initializeSeeMoreBtn() {
   });
 }
 
-export function initializeBookContainers(){
-  const booksImg = document.querySelectorAll('.book-img');
-  booksImg.forEach(img => {
-    img.addEventListener('click', (e) => {
+export function initializeBookContainers() {
+  const booksContainer = document.querySelectorAll('.list-item-cont');
+
+  booksContainer.forEach(img => {
+    img.addEventListener('click', e => {
       showBookInfo(e.target.parentElement);
     });
   });
