@@ -23,9 +23,9 @@ function generateList(fromNum, toNum) {
       <a href="${fondsList[fromNum - 1].link}" target="_blank">
         <span>0${fromNum}</span>
         <img
-          src="../img/fonds/${fondsList[fromNum - 1].name}_1x.png"
-          srcset="../img/fonds/${fondsList[fromNum - 1].name}_1x.png 1x,
-                  ../img/fonds/${fondsList[fromNum - 1].name}_2x.png 2x"
+          src="./img/fonds/${fondsList[fromNum - 1].name}_1x.png"
+          srcset="./img/fonds/${fondsList[fromNum - 1].name}_1x.png 1x,
+                  ./img/fonds/${fondsList[fromNum - 1].name}_2x.png 2x"
         >
       </a>
     </li>
