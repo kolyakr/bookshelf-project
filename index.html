@@ -33,8 +33,9 @@
       referrerpolicy="no-referrer"
     />
     
-    <script type="module" crossorigin src="/bookshelf-project/assets/themeButton-11dc8892.js"></script>
-    <link rel="stylesheet" href="/bookshelf-project/assets/themeButton-fe256cce.css">
+    <script type="module" crossorigin src="/bookshelf-project/assets/vendor-0cb09735.js"></script>
+    <script type="module" crossorigin src="/bookshelf-project/assets/themeButton-5dac039e.js"></script>
+    <link rel="stylesheet" href="/bookshelf-project/assets/themeButton-844cceb8.css">
   </head>
   <body class="container">
     <header class="header">
@@ -46,12 +47,12 @@
 
     <ul>
       <li>
-        <a href="index.html">
+        <a href="./index.html">
           <span class="text-home">HOME</span>
         </a>
       </li>
       <li>
-        <a href="../shoppingListPage.html">
+        <a href="./shoppingListPage.html">
           <span>SHOPPING LIST</span>
           <svg class="icon-uil-cart">
             <use href="../img/icons.svg#icon-uil-cart"></use>
@@ -78,7 +79,13 @@
   </nav>
 </header>
 
-    <!-- <div class="fonds-container">
+    <div class="content">
+      <div class="sidebar">
+        <div class="all-categories-cont">
+  <ul class="categories-list">
+  </ul>
+</div>
+        <div class="fonds-container">
   <div class="title">
     <h2>Support Ukraine</h2>
     <svg class="icon-gerb fond-svg">
@@ -88,63 +95,96 @@
 
   <ul class="fonds-list">
     <li>
-      <a href="https://www.savethechildren.net/what-we-do/emergencies/war-ukraine">
+      <a
+        href="https://www.savethechildren.net/what-we-do/emergencies/war-ukraine"
+        target="_blank"
+      >
         <span>01</span>
         <img
-          src="../img/fonds/save-the-children_1x.png"
-          srcset="../img/fonds/save-the-children_1x.png 1x,
-                  ../img/fonds/save-the-children_2x.png 2x"
-        >
+          srcset="data:image/png;base64,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 1x, /bookshelf-project/assets/save-the-children_2x-da880b54.png 2x"
+          src="data:image/png;base64,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"
+          alt="Save the Chidren"
+          width="129"
+          height="32"
+        />
       </a>
     </li>
     <li>
-      <a href="https://www.projecthope.org/country/ukraine/">
+      <a href="https://www.projecthope.org/country/ukraine/" target="_blank">
         <span>02</span>
         <img
           src="../img/fonds/project-hope_1x.png"
-          srcset="../img/fonds/project-hope_1x.png 1x,
-                  ../img/fonds/project-hope_2x 2x"
-        >
+          srcset="
+            ../img/fonds/project-hope_1x.png 1x,
+            ../img/fonds/project-hope_2x.png 2x
+          "
+          alt="Project HOPE"
+          width="62"
+          height="32"
+        />
       </a>
     </li>
     <li>
-      <a href="https://internationalmedicalcorps.org/country/ukraine/">
+      <a
+        href="https://internationalmedicalcorps.org/country/ukraine/"
+        target="_blank"
+      >
         <span>03</span>
         <img
           src="../img/fonds/int-medical-corps_1x.png"
-          srcset="../img/fonds/int-medical-corps_1x.png 1x,
-                  ../img/fonds/int-medical-corps_2x.png 2x"
-        >
+          srcset="
+            ../img/fonds/int-medical-corps_1x.png 1x,
+            ../img/fonds/int-medical-corps_2x.png 2x
+          "
+          alt="International Medical Corps"
+          width="103"
+          height="32"
+        />
       </a>
     </li>
     <li>
-      <a href="https://www.razomforukraine.org/">
+      <a href="https://www.razomforukraine.org/" target="_blank">
         <span>04</span>
         <img
           src="../img/fonds/razom_1x.png"
-          srcset="../img/fonds/razom_1x.png 1x,
-                  ../img/fonds/razom_2x.png 2x"
-        >
+          srcset="../img/fonds/razom_1x.png 1x, ../img/fonds/razom_2x.png 2x"
+          alt="RAZOM"
+          width="82"
+          height="32"
+        />
       </a>
     </li>
     <li>
-      <a href="https://www.actionagainsthunger.org/location/europe/ukraine/">
+      <a
+        href="https://www.actionagainsthunger.org/location/europe/ukraine/"
+        target="_blank"
+      >
         <span>05</span>
         <img
           src="../img/fonds/action-ag-hunger_1x.png"
-          srcset="../img/fonds/action-ag-hunger_1x.png 1x,
-                  ../img/fonds/action-ag-hunger_2x.png 2x"
-        >
+          srcset="
+            ../img/fonds/action-ag-hunger_1x.png 1x,
+            ../img/fonds/action-ag-hunger_2x.png 2x
+          "
+          alt="Action against hunger"
+          width="55"
+          height="32"
+        />
       </a>
     </li>
     <li>
-      <a href="https://prytulafoundation.org/en">
+      <a href="https://prytulafoundation.org/en" target="_blank">
         <span>06</span>
         <img
           src="../img/fonds/fond-prutyla_1x.png"
-          srcset="../img/fonds/fond-prytula_1x.png 1x,
-                  ../img/fonds/fond-prytula_2x.png 2x"
-        >
+          srcset="
+            ../img/fonds/fond-prytula_1x.png 1x,
+            ../img/fonds/fond-prytula_2x.png 2x
+          "
+          alt="Serhiy Prytula Charity Foundation"
+          width="115"
+          height="32"
+        />
       </a>
     </li>
   </ul>
@@ -155,7 +195,13 @@
       </svg>
     </button>
   </div>
-</div> -->
+</div>
+
+      </div>
+      <div class="main">
+        <article class="main-container"></article>
+      </div>
+    </div>
 
     
 
