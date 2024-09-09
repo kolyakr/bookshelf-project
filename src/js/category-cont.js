@@ -23,7 +23,7 @@ export async function generateCategoryBooks(category) {
   categoryBooks.forEach(book => {
     generalHTML += `
         <li class="list-item-cont">
-          <div>
+          <div data-id="${book._id}">
             <img class="book-img" src="${book.book_image}" alt="${book.list_name}" width="${book.book_image_width}" height="${book.book_image_height}"  loading="lazy">
             <p class="book-name">${book.title}</p>
             <p class="author-name">${book.author}</p>
