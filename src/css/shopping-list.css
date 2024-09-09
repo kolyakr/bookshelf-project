@@ -1,0 +1,33 @@
+.sh-list-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sh-list-title{
+  width: 292px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 48px;
+  white-space: nowrap;
+  color: var(--main-text-color);
+
+  span{
+    color: var(--violet-color);
+  }
+}
+
+.main-sh-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-sh-list-item{
+  width: 996px;
+  height: 213px;
+  background-color: var(--main-theme-color);
+  border-radius: 16px;
+  border: 2px solid var(--violet-color);
+  padding: 30px 24px 30px 24px;
+}
