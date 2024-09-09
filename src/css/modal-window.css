@@ -1,48 +1,45 @@
-.modal-window{
+.modal-window {
   position: relative;
   display: flex;
   flex-direction: column;
   padding: 40px;
   gap: 40px;
   width: 579px;
-  height: 485px;
+  height: 490px;
   border: 2px solid var(--modal-border-color);
   background-color: var(--modal-background-color);
   border-radius: 18px;
-
-  svg{
-    fill: var(--black-color);
-  }
 }
 
-.modal-book-info{
+.modal-book-info {
   display: flex;
   gap: 24px;
-  width: 279px;
+  width: 100%;
 
-  .modal-book-img{
+  .modal-book-img {
     width: 192px;
     height: 281px;
   }
 
-  ul{
+  ul {
     display: flex;
     flex-direction: column;
-    width: 279px;
+    width: calc(100% - 192px);
     gap: 20px;
 
-    .name-and-author{
+    .name-and-author {
       display: flex;
       flex-direction: column;
       gap: 5px;
 
-      .modal-book-name{
+      .modal-book-name {
         font-weight: 700;
         font-size: 24px;
-        text-align:left;
+        text-align: left;
         color: var(--modal-border-color);
       }
-      .modal-book-author{
+
+      .modal-book-author {
         font-weight: 400;
         font-size: 14px;
         text-align: left;
@@ -50,51 +47,53 @@
       }
     }
 
-    .modal-book-description{
+    .modal-book-description {
       color: var(--modal-border-color);
+      white-space: normal;
+      word-wrap: break-word;
+      max-height: 100px;
+      overflow-y: auto;
     }
 
-    .modal-links{
+    .modal-links {
       width: 115px;
       height: 32px;
       display: flex;
       gap: 20px;
       align-items: center;
 
-      img{
+      img {
         filter: grayscale(100%);
       }
     }
-
   }
 }
 
-.do-shopping-list-btn{
-    width: 499px;
-    height: 64px;
-    border-radius: 40px;
-    padding: 20px 173px 20px 173px;
-    border: 2px solid var(--violet-color);
-    overflow: hidden;
-    text-align: center;
-    line-height: 0px;
-    font-weight: 700;
-    font-size: 18px;
-    background-color: var(--modal-background-color);
-    color: var(--modal-border-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    white-space: nowrap;
-    overflow: hidden;
+.do-shopping-list-btn {
+  width: 100%;
+  max-width: 499px;
+  height: 64px;
+  border-radius: 40px;
+  padding: 20px;
+  border: 2px solid var(--violet-color);
+  font-weight: 700;
+  font-size: 18px;
+  background-color: var(--modal-background-color);
+  color: var(--modal-border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: nowrap;
 }
 
-.x-close-btn{
-  width: 28px;
-  height: 28px;
+.x-close-btn {
+  width: 38px;
+  height: 38px;
   position: absolute;
   top: 24px;
-  left: 527px;
+  right: 24px;
+  background-color: var(--modal-background-color);
+  border: none;
 }
 
 .congratulation-text{
