@@ -37,6 +37,8 @@
 
   --modal-border-color: var(--white-color);
   --modal-background-color: var(--gray-color);
+  --modal-invert: invert(100%);
+  --modal-amazon-color: brightness(0) invert(100%);
 
   /* Theme switcher */
   --switch-btn-primary-color: #ffe5b5;
@@ -72,6 +74,8 @@
   /*Modal window*/
   --modal-border-color: var(--black-color);
   --modal-background-color: var(--white-color);
+  --modal-invert: invert(0%);
+  --modal-amazon-color: grayscale(100%);
 }
 
 .visually-hidden {

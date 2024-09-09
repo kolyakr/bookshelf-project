@@ -65,6 +65,9 @@
       img {
         filter: grayscale(100%);
       }
+      .amazon-img{
+        filter: var(--modal-amazon-color);
+      }
     }
   }
 }
@@ -94,6 +97,10 @@
   right: 24px;
   background-color: var(--modal-background-color);
   border: none;
+
+  img{
+    filter: var(--modal-invert);
+  }
 }
 
 .congratulation-text{
