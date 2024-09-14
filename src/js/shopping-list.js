@@ -1,4 +1,4 @@
-const key = "shoppingList";
+export const key = "shoppingList";
 
 export function addToShList(bookItem) {
   let shoppingList = localStorage.getItem(key);

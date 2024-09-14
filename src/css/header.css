@@ -40,12 +40,17 @@
   display: flex;
 }
 
-.text-home {
-  background-color: var(--yellow-color);
-  border-radius: 0.9rem;
+.home-link,
+.shopping-list-link {
   padding: 10px 17px;
+  color: var(--header-text-color);
+}
+
+.current-page{
+  background-color: var(--yellow-color);
   color: var(--black-color);
   font-weight: 700;
+  border-radius: 0.9rem;
 }
 
 .icon-uil-cart {

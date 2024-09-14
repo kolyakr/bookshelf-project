@@ -65,6 +65,9 @@
       img {
         filter: grayscale(100%);
       }
+      .amazon-img {
+        filter: var(--modal-amazon-color);
+      }
     }
   }
 }
@@ -93,8 +96,8 @@
   background-color: transparent;
   border: none;
   position: absolute;
-  top: 24px;
-  right: 24px;
+  top: 18px;
+  right: 18px;
   width: 28px;
   height: 28px;
 }

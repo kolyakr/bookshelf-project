@@ -1,0 +1,139 @@
+.sh-list-cont{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sh-list-title{
+  width: 292px;
+  height: 52px;
+  font-weight: 700;
+  font-size: 48px;
+  white-space: nowrap;
+  color: var(--main-text-color);
+
+  span{
+    color: var(--violet-color);
+  }
+}
+
+.main-sh-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-sh-list-item{
+  background-color: var(--sh-list-color);
+  display: flex;
+  gap: 24px;
+  width: 996px;
+  height: 213px;
+  border-radius: 16px;
+  border: 2px solid var(--violet-color);
+  padding: 30px 24px 30px 24px;
+}
+
+.sh-img-cont{
+  img{
+    width: 116p;
+    height: 165px;
+    border-radius: 8px;
+  }
+}
+
+.sh-info-cont{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 808px;
+  height: 165px;
+}
+
+.sh-info-title{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.sh-title-category{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sh-title{
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: -0.04em;
+  color: var(--sh-list-text-color);
+}
+
+.sh-category{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.03em;
+  color: var(--sh-list-gray-color);
+}
+
+.delete-sh-list-item-btn{
+  width: 34px;
+  height: 34px;
+  background-color: var(--violet-color);
+  border: none;
+  border-radius: 50%;
+
+  svg{
+    height: 18px;
+    width: 18px;
+  }
+}
+
+.sh-info-description{
+  p{
+    font-weight: 400;
+    font-size: 18px;
+    letter-spacing: -0.04em;
+    line-height: 18px;
+    color: var(--sh-list-text-color);
+  }
+
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.sh-info-footer{
+  display: flex;
+  justify-content: space-between;
+}
+
+.sh-author{
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: -0.04em;
+  color: var(--sh-list-gray-color);
+  font-style: italic;
+  align-self: flex-end;
+}
+
+.sh-info-footer-imgs{
+  display: flex;
+  gap: 16px;
+  width: 92px;
+  height: 27px;
+}
+
+.sh-img-amazon{
+  width: 48px;
+  height: 15px;
+}
+
+.sh-img-book{
+  width: 28px;
+  height: 27px;
+}
+

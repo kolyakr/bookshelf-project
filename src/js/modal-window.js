@@ -22,6 +22,7 @@ export async function showBookInfo(bookItem) {
               <li class="modal-links">
                 <a href="${book.buy_links[0].url}">
                   <img
+                    class="amazon-img"
                     srcset="
                       ./img/modal/amazon_1x.png 1x,
                       ./img/modal/amazon_2x.png 2x
