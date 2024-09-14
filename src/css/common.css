@@ -34,7 +34,9 @@
   --main-theme-color: var(--gray-color);
 
   /*Modal window*/
-
+  --modal-name-color: var(--white-color);
+  --modal-description-color: var(--white-color);
+  --modal-congratulation-color: #ffffff80;
   --modal-border-color: var(--white-color);
   --modal-background-color: var(--gray-color);
 
@@ -70,6 +72,9 @@
   --switch-btn-border-color: var(--black-color);
 
   /*Modal window*/
+  --modal-name-color: var(--dark-color);
+  --modal-description-color: var(--dark-color);
+  --modal-congratulation-color: #11111180;
   --modal-border-color: var(--black-color);
   --modal-background-color: var(--white-color);
 }
@@ -91,4 +96,9 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.basicLightbox {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
 }

@@ -42,17 +42,9 @@ export async function showBookInfo(bookItem) {
             </ul>
           </div>
           <button class="do-shopping-list-btn">ADD TO SHOPPING LIST</button>
-          <button class="x-close-btn">
-            <img
-                    srcset="
-                      ./img/modal/x-close_1x.png 1x,
-                      ./img/modal/x-close_2x.png 2x
-                    "
-                    src="./img/modal/x-close_1x.png"
-                  />
-          </button>
+          <button name="close-modal" class="x-close-btn icon-close js-icon-close"></button>
           <p class="congratulation-text visually-hidden">
-            Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.
+            Congratulations! You have added the book to the shopping list. <br> To delete, press the button “Remove from the shopping list”.
           </p>
         </div>
   `,
@@ -60,16 +52,17 @@ export async function showBookInfo(bookItem) {
       onShow: instance => {
         console.log('OPEN');
 
-        instance.element().querySelector('.x-close-btn').onclick = instance.close;
+        instance.element().querySelector('.x-close-btn').onclick =
+          instance.close;
 
         window.addEventListener('keydown', onKeyDown);
 
         const doBtn = instance.element().querySelector('.do-shopping-list-btn');
-        doBtn.addEventListener('click', (e) => {
+        doBtn.addEventListener('click', e => {
           initShoppingBtn(e.target, book);
         });
 
-        if(checkBookInShList(book)){
+        if (checkBookInShList(book)) {
           addRemoveBtnClass(doBtn);
         }
       },
@@ -87,21 +80,25 @@ export async function showBookInfo(bookItem) {
     }
   };
 
-  function initShoppingBtn(btn, book){
-    if(!checkBookInShList(book)){
+  function initShoppingBtn(btn, book) {
+    if (!checkBookInShList(book)) {
       addRemoveBtnClass(btn);
       addToShList(book);
-    }else{
+    } else {
       btn.textContent = 'ADD TO SHOPPING LIST';
-      instance.element().querySelector('.congratulation-text')
+      instance
+        .element()
+        .querySelector('.congratulation-text')
         .classList.add('visually-hidden');
       removeFromShList(book);
     }
   }
 
-  function addRemoveBtnClass(btn){
+  function addRemoveBtnClass(btn) {
     btn.textContent = 'REMOVE FROM THE SHOPPING LIST';
-    instance.element().querySelector('.congratulation-text')
+    instance
+      .element()
+      .querySelector('.congratulation-text')
       .classList.remove('visually-hidden');
   }
 

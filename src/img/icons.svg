@@ -30,9 +30,6 @@
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M28 18.663h-24"></path>
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M22.663 24h-18.663"></path>
 </symbol>
-<symbol id="icon-x-close" viewBox="0 0 32 32">
-<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="3.4286" d="M24 8l-16 16M8 8l16 16"></path>
-</symbol>
 <symbol id="icon-lock" viewBox="0 0 32 32">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2.2857" d="M9.326 14.663v-4c0-3.68 2.983-6.663 6.674-6.663 3.68 0 6.663 2.983 6.663 6.663v4M21.589 14.663c2.251 0 3.371 0 4.217 0.434 0.754 0.389 1.371 0.994 1.749 1.749 0.446 0.857 0.446 1.977 0.446 4.217v0.537c0 2.24 0 3.36-0.446 4.206-0.377 0.754-0.994 1.371-1.749 1.749-0.846 0.446-1.966 0.446-4.217 0.446h-11.189c-2.251 0-3.371 0-4.217-0.446-0.754-0.377-1.371-0.994-1.749-1.749-0.434-0.846-0.434-1.966-0.434-4.206v-0.537c0-2.24 0-3.36 0.434-4.217 0.377-0.754 0.994-1.36 1.749-1.749 0.846-0.434 1.966-0.434 4.217-0.434h11.189z"></path>
 </symbol>
