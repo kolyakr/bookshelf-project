@@ -1,7 +1,7 @@
 let currentMarkedPage = null;
 
 export function markHeaderLink(currentPage){
-  if(currentPage.endsWith('index.html')){
+  if(currentPage.endsWith('index.html') || currentPage.endsWith('/')){
     document.querySelector('.home-link')
       .classList.add('current-page');
   }else{

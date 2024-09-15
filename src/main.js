@@ -6,9 +6,8 @@ import { generateShoppingList } from './js/shoppingListPage';
 
 document.addEventListener('DOMContentLoaded', async () => {
   const currentPage = window.location.pathname;
-
   markHeaderLink(currentPage);
-  if(currentPage.endsWith('index.html')){
+  if(currentPage.endsWith('index.html') || currentPage.endsWith('/')){
     await generateCategoryList();
     await generateBestSellersBooks();
   }else{
