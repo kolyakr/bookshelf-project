@@ -23,9 +23,14 @@ export function generateShoppingList(){
               </div>
               <div>
                 <button class="delete-sh-list-item-btn">
-                  <svg class="icon-trash">
-                    <use href="../img/icons.svg#icon-trash"></use>
-                  </svg>
+                  <img
+                    class="amazon-img"
+                    srcset="
+                      ./img/modal/trash_1x.png 1x,
+                      ./img/modal/trash_2x.png 2x
+                    "
+                    src="./img/modal/trash_1x.png"
+                  />
                 </button>
               </div>
             </div>
@@ -39,8 +44,25 @@ export function generateShoppingList(){
                 <p class="sh-author">${item.author}</p>
               </div>
               <div class="sh-info-footer-imgs">
-                <img class="sh-img-amazon" src="" alt="">
-                <img class="sh-img-book" src="" alt="">
+                <a href="${item.buy_links[0].url}">
+                  <img
+                    class="amazon-img"
+                    srcset="
+                      ./img/modal/amazon_1x.png 1x,
+                      ./img/modal/amazon_2x.png 2x
+                    "
+                    src="./img/modal/amazon_1x.png"
+                  />
+                </a>
+                <a href="${item.buy_links[1].url}">
+                  <img
+                    srcset="
+                      ./img/modal/book_1x.png 1x,
+                      ./img/modal/book_2x.png 2x
+                    "
+                    src="./img/modal/book_1x.png"
+                  />
+                </a>
               </div>
             </div>
           </div>

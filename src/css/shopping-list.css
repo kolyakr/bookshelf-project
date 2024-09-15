@@ -35,6 +35,8 @@
 }
 
 .sh-img-cont{
+  width: 116p;
+  height: 165px;
   img{
     width: 116p;
     height: 165px;
@@ -79,16 +81,11 @@
 }
 
 .delete-sh-list-item-btn{
-  width: 34px;
-  height: 34px;
+  width: 30px;
+  height: 30px;
   background-color: var(--violet-color);
   border: none;
   border-radius: 50%;
-
-  svg{
-    height: 18px;
-    width: 18px;
-  }
 }
 
 .sh-info-description{
@@ -108,6 +105,7 @@
 .sh-info-footer{
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .sh-author{
@@ -125,6 +123,7 @@
   gap: 16px;
   width: 92px;
   height: 27px;
+  align-items: center;
 }
 
 .sh-img-amazon{
