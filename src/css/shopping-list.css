@@ -129,10 +129,12 @@
 .sh-img-amazon{
   width: 48px;
   height: 15px;
+  filter: var(--modal-amazon-color);
 }
 
 .sh-img-book{
   width: 28px;
   height: 27px;
+  filter: grayscale(100%);
 }
 

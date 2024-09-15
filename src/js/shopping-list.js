@@ -39,3 +39,20 @@ export function checkBookInShList(bookItem) {
   }
   return false;
 }
+
+export function deleteFromShList(id){
+  let list = localStorage.getItem(key);
+  if(!list){
+    return false;
+  }else{
+    let shoppingList = JSON.parse(list);
+    const deleteIndex = shoppingList.findIndex(item => item._id === id);
+    if(deleteIndex != -1){
+      shoppingList.splice(deleteIndex, 1);
+      localStorage.setItem(key, JSON.stringify(shoppingList));
+      return true;
+    }else{
+      return false;
+    }
+  }
+}

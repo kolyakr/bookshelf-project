@@ -1,4 +1,5 @@
 import { key } from "./shopping-list"
+import { deleteFromShList } from "./shopping-list";
 
 const shListItemsList = document.querySelector('.main-sh-list');
 
@@ -21,16 +22,16 @@ export function generateShoppingList(){
                 <p class="sh-title">${item.title}</p>
                 <p class="sh-category">${item.list_name}</p>
               </div>
-              <div>
+              <div data-id="${item._id}">
                 <button class="delete-sh-list-item-btn">
-                  <img
-                    class="amazon-img"
-                    srcset="
+                   <img
+                     class="amazon-img"
+                     srcset="
                       ./img/modal/trash_1x.png 1x,
-                      ./img/modal/trash_2x.png 2x
-                    "
-                    src="./img/modal/trash_1x.png"
-                  />
+                       ./img/modal/trash_2x.png 2x
+                     "
+                     src="./img/modal/trash_1x.png"
+                   />
                 </button>
               </div>
             </div>
@@ -46,7 +47,7 @@ export function generateShoppingList(){
               <div class="sh-info-footer-imgs">
                 <a href="${item.buy_links[0].url}">
                   <img
-                    class="amazon-img"
+                    class="sh-img-amazon"
                     srcset="
                       ./img/modal/amazon_1x.png 1x,
                       ./img/modal/amazon_2x.png 2x
@@ -56,6 +57,7 @@ export function generateShoppingList(){
                 </a>
                 <a href="${item.buy_links[1].url}">
                   <img
+                    class="sh-img-book"
                     srcset="
                       ./img/modal/book_1x.png 1x,
                       ./img/modal/book_2x.png 2x
@@ -71,6 +73,17 @@ export function generateShoppingList(){
     });
 
     shListItemsList.innerHTML = generalHTML;
+
+    document.querySelectorAll('.delete-sh-list-item-btn')
+      .forEach((button) => {
+        button.addEventListener('click', (e) => {
+          const id = e.target.closest('div').dataset.id;
+          if(deleteFromShList(id)){
+            generateShoppingList();
+          }else{
+            return;
+          }
+        });
+      });
   }
 }
-
